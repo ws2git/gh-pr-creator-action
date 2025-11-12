@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-TITLE="$1"
-BODY="$2"
-SOURCE_BRANCH="$3"
-DEST_BRANCH="$4"
+# Verificação de Parâmetros
+TITLE="${1:?É necessário fornecer o TÍTULO do PR.}"
+BODY="${2:?É necessário fornecer o CORPO do PR.}"
+SOURCE_BRANCH="${3:?É necessário fornecer a BRANCH DE ORIGEM.}"
+DEST_BRANCH="${4:?É necessário fornecer a BRANCH DE DESTINO.}"
 
 echo "Abrindo PR: '$TITLE' de '$SOURCE_BRANCH' para '$DEST_BRANCH'"
 
