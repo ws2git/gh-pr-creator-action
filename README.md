@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create PR from feature/test to develop
-        uses: ws2git/gh-pr-action@v1
+        uses: ws2git/gh-pr-creator-action@v1
         env:
           GH_TOKEN: ${{ github.token }}
         with:
